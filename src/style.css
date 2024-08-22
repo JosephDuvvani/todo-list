@@ -1,0 +1,148 @@
+:root {
+    --clr-primary: #F4583F;
+    --clr-secondary: hsl(230, 19%, 37%);
+    --clr-accent: hsl(175, 84%, 57%);
+    --clr-accent-light: hsl(165, 56%, 83%);
+    --clr-neutral: hsl(0, 0%, 90%);
+    --clr-light: hsl(0, 0%, 100%);
+    --clr-dark: hsl(0, 0%, 0%);
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    box-sizing: border-box;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 17rem 1fr;
+    font-family: sans-serif;
+    color: var(--clr-neutral);
+    fill: var(--clr-light);
+}
+
+.sidebar {
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem 0;
+    background-color: var(--clr-secondary);
+}
+
+.sidebar-icon {
+    width: 1.3rem;
+    height: 1.3rem;
+}
+
+.user {
+    border-radius: 5px;
+}
+
+.primary-nav {
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
+    padding-bottom: 1.5rem;
+}
+
+.nav-list li {
+    padding: .5rem .7rem;
+    margin: 0 .3rem;
+    border-radius: 3px;
+    display: grid;
+    grid-template-columns: 2rem 0 1fr;
+    align-items: center;
+}
+
+.nav-list li:hover,
+.group .head:hover   {
+    background-color: hsl(0, 0%, 0%, 0.1);
+}
+
+.nav-list li input {
+    width: 0;
+    height: 0;
+}
+
+.user,
+.group .head {
+    display: grid;
+    grid-template-columns: 2rem 1fr min-content;
+    align-items: center;
+    padding: .5rem .7rem;
+    margin: 0 .3rem;
+}
+
+.groups {
+    display: grid;
+    gap: 1rem;
+}
+
+.group .head {
+    color: var(--clr-accent);
+    fill: var(--clr-accent);
+    cursor: context-menu;
+}
+
+.group-name {
+    font-weight: 700;
+}
+
+.content {
+    padding: 3rem;
+    gap: 1rem;
+    color: var(--clr-secondary);
+}
+
+.content .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.task-list {
+    display: grid;
+    gap: .3rem;
+}
+
+.task-list li {
+    padding: 1rem .5rem;
+    border-radius: 3px;
+    background-color: var(--clr-primary);
+    color: var(--clr-light);
+}
+
+form.new-task {
+    display: flex;
+    margin-top: 1rem;
+}
+
+form.new-task input{
+    width: 100%;
+    border: 0;
+    background: none;
+    border-bottom: 2px solid var(--clr-secondary);
+    order: 2;
+}
+
+form.new-task input:focus {
+    outline: none;
+}
+
+.new-task-btn {
+    border: 0;
+    background: none;
+    font-size: 1.5rem;
+    margin-right: .5rem;
+    color: inherit;
+}
