@@ -6,17 +6,19 @@
     <title>Todo List</title>
   </head>
   <body>
+    <h1 class="bg-text">Task Away</h1>
+
     <div class="sidebar">
       <header>
         <div class="user">
-          <div class="user-picture sidebar-icon">-</div>
+          <div class="user-picture"></div>
           <div class="user-profile">Joseph</div>
         </div>
       </header>
 
       <ul class="primary-nav nav-list">
-        <li>
-          <div class="sidebar-icon">
+        <li id="my-day">
+          <div class="my-day-icon sidebar-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <title>white-balance-sunny</title>
               <path
@@ -24,11 +26,10 @@
               />
             </svg>
           </div>
-          <input type="radio" id="my-day" name="project-link" />
-          <label for="my-day" class="project-name">My Day</label>
+          <div class="project-name">My Day</div>
         </li>
-        <li>
-          <div class="sidebar-icon">
+        <li id="important">
+          <div class="important-icon sidebar-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <title>star-outline</title>
               <path
@@ -36,11 +37,10 @@
               />
             </svg>
           </div>
-          <input type="radio" id="important" name="project-link" />
-          <label for="important" class="project-name">Important</label>
+          <div class="project-name">Important</div>
         </li>
-        <li>
-          <div class="sidebar-icon">
+        <li id="upcoming">
+          <div class="upcoming-icon sidebar-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <title>list-box-outline</title>
               <path
@@ -48,8 +48,7 @@
               />
             </svg>
           </div>
-          <input type="radio" id="upcoming" name="project-link" />
-          <label for="upcoming" class="project-name">Upcoming</label>
+          <div class="project-name">Upcoming</div>
         </li>
       </ul>
 
@@ -78,8 +77,7 @@
                   />
                 </svg>
               </div>
-              <input type="radio" id="personal" name="project-link" />
-              <label for="personal" class="project-name">Personal</label>
+              <div id="personal" class="project-name">Personal</div>
             </li>
             <li>
               <div class="sidebar-icon">
@@ -90,8 +88,7 @@
                   />
                 </svg>
               </div>
-              <input type="radio" id="health" name="project-link" />
-              <label for="health" class="project-name">Health</label>
+              <div id="health" class="project-name">Health</div>
             </li>
             <li>
               <div class="sidebar-icon">
@@ -102,8 +99,7 @@
                   />
                 </svg>
               </div>
-              <input type="radio" id="work" name="project-link" />
-              <label for="work" class="project-name">Work</label>
+              <div id="work" class="project-name">Work</div>
             </li>
           </ul>
         </li>
@@ -132,8 +128,7 @@
                   />
                 </svg>
               </div>
-              <input type="radio" id="brand" name="project-link" />
-              <label for="brand" class="project-name">Brand</label>
+              <div id="brand" class="project-name">Brand</div>
             </li>
             <li>
               <div class="sidebar-icon">
@@ -144,8 +139,7 @@
                   />
                 </svg>
               </div>
-              <input type="radio" id="meeting" name="project-link" />
-              <label for="meeting" class="project-name">Meeting</label>
+              <div id="meeting" class="project-name">Meeting</div>
             </li>
             <li>
               <div class="sidebar-icon">
@@ -156,8 +150,7 @@
                   />
                 </svg>
               </div>
-              <input type="radio" id="website" name="project-link" />
-              <label for="website" class="project-name">Website Update</label>
+              <div id="website" class="project-name">Website Update</div>
             </li>
           </ul>
         </li>
@@ -181,15 +174,9 @@
           </li>
         </ul>
 
-        <form action="" method="post" class="new-task">
+        <form action="" class="new-task">
           <input type="text" id="add-task" aria-label="add task" />
-          <button
-            type="submit"
-            class="new-task-btn"
-            aria-label="add task button"
-          >
-            +
-          </button>
+          <button class="new-task-btn" aria-label="add task button">+</button>
         </form>
       </div>
     </div>
