@@ -17,7 +17,7 @@
       </header>
 
       <ul class="primary-nav nav-list">
-        <li id="my-day">
+        <li id="my-day" class="active">
           <div class="my-day-icon sidebar-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <title>white-balance-sunny</title>
@@ -163,19 +163,30 @@
       </div>
 
       <div class="body">
-        <ul class="task-list">
-          <li>
+        <div class="task-list">
+          <div class="task">
             <input type="checkbox" id="task-1" />
-            <label for="task-1">Do it now!</label>
-          </li>
-          <li>
+            <label for="task-1">
+              <span class="custom-checkbox"></span>
+              <span class="task-name">Do it now!</span>
+            </label>
+          </div>
+          <div class="task">
             <input type="checkbox" id="task-2" />
-            <label for="task-2">Do it now!</label>
-          </li>
-        </ul>
+            <label for="task-2">
+              <span class="custom-checkbox"></span>
+              <span class="task-name">Do it now!</span>
+            </label>
+          </div>
+        </div>
 
         <form action="" class="new-task">
-          <input type="text" id="add-task" aria-label="add task" />
+          <input
+            type="text"
+            id="add-task"
+            aria-label="add task"
+            placeholder="new task name"
+          />
           <button class="new-task-btn" aria-label="add task button">+</button>
         </form>
       </div>
